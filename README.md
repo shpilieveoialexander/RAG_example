@@ -35,3 +35,40 @@ It allows you to ingest documents into a vector store and query them using a Lar
 1. **Clone the repository**
    ```bash
    git clone git@github.com:shpilieveoialexander/RAG_example.git
+   ```
+   
+
+2. **Create and activate a virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
+3. **Install dependencies**
+   ```bash 
+   pip install -r requirements.txt
+   ```
+
+4. **Create .env and add OPENAI_API_KEY="your_openai_api_key_here"** 
+
+## 🐳 Running with Docker
+1. **Build and start the container**
+   ```bash
+   docker-compose up --build
+   ```
+## 📂 Project Structure
+```
+   ├── main.py                # FastAPI entry point
+   ├── backend/
+   │   ├── rag.py              # Core RAG query logic
+   │   ├── ingestion.py        # Document ingestion logic
+   │   ├── db.py               # Vector store handling
+   │   ├── schemas.py          # Pydantic models
+   ├── config.py               # Environment variables & settings
+   ├── requirements.txt
+   ├── docker-compose.yml
+   ├── Dockerfile
+   └── .env
+```
+
+## 📄 License
+**This project is licensed under the MIT License.**
